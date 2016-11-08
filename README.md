@@ -1,4 +1,4 @@
-### This is the defaul OnlineImage wordpress theme based on JointsWP foundation framework
+### This is the default OnlineImage wordpress theme based on JointsWP foundation framework
 
 Find out more here: www.jointswp.com  
 Demo: www.jointswp.com/demo
