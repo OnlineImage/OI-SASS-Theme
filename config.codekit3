@@ -70,7 +70,7 @@
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/assets\/css\/style-min.css",
 		"oF": 0,
 		"oS": 0
@@ -303,7 +303,7 @@
 		"uL": 1
 		},
 	"\/assets\/scss\/_custom.scss": {
-		"aP": 1,
+		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
