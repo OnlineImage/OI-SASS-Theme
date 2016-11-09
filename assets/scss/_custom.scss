@@ -1,4 +1,18 @@
 /************************************************
 Stylesheet: Custom Stylesheet
 *************************************************/
-
+#featured-hero {
+  background-size: cover;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  margin: 0 0 2rem;
+  position: relative;
+  height: 12.5rem;
+      border-bottom: solid 8px #008496; }
+  @media screen and (min-width: 40em) {
+    #featured-hero {
+      height: 25rem;
+	  position:absolute;
+	  width:100%;
+	  top:0; 
+	  } }

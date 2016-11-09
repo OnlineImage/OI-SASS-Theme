@@ -697,6 +697,12 @@
 		"oAP": "\/parts\/content-offcanvas.php",
 		"oF": 0
 		},
+	"\/parts\/featured-image.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/featured-image.php",
+		"oF": 0
+		},
 	"\/parts\/loop-archive-grid.php": {
 		"ft": 8192,
 		"oA": 0,
