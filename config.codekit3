@@ -3451,6 +3451,12 @@
 		"oAP": "\/template-full-width.php",
 		"oF": 0
 		},
+	"\/template-home.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-home.php",
+		"oF": 0
+		},
 	"\/vendor\/foundation-sites\/.babelrc": {
 		"ft": 8192,
 		"oA": 2,
