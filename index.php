@@ -23,7 +23,7 @@
 																								
 		    </main> <!-- end #main -->
 		    
-		    <?php get_sidebar(); ?>
+		    <?php get_sidebar('blog'); ?>
 
 		</div> <!-- end #inner-content -->
 

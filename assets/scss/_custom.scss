@@ -1,13 +1,14 @@
 /************************************************
 Stylesheet: Custom Stylesheet
 *************************************************/
+// Add custom class from typekit id mum5dth
 #featured-hero {
     background-size: cover;
     background-position: 100% 50%;
     background-repeat: no-repeat;
     position: relative;
-    height: 12.5rem;
+    height: 20.750rem;
     @include breakpoint(medium) {
-              height: 25rem;
+              height: 30rem;
         }
 }

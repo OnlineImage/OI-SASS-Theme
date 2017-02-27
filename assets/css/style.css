@@ -2184,7 +2184,7 @@ textarea[readonly] {
   -webkit-appearance: none;
   -moz-appearance: none; }
 
-input[type='search'] {
+input[type="search"] {
   box-sizing: border-box; }
 
 [type='file'],
@@ -2421,8 +2421,8 @@ select {
       border: 1px solid #777;
       color: #777; }
       .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-        border-color: #3c3c3c;
-        color: #3c3c3c; }
+        border-color: #3c3b3b;
+        color: #3c3b3b; }
     .button.hollow.success {
       border: 1px solid #3adb76;
       color: #3adb76; }
@@ -3926,32 +3926,24 @@ table {
   width: 100%;
   margin-bottom: 1rem;
   border-radius: 0; }
-  table thead,
-  table tbody,
-  table tfoot {
+  thead, tbody, tfoot {
     border: 1px solid #f1f1f1;
     background-color: #fefefe; }
-  table caption {
+  caption {
     font-weight: bold;
     padding: 0.5rem 0.625rem 0.625rem; }
-  table thead,
-  table tfoot {
+  thead, tfoot {
     background: #f8f8f8;
     color: #0a0a0a; }
-    table thead tr,
-    table tfoot tr {
+    thead tr, tfoot tr {
       background: transparent; }
-    table thead th,
-    table thead td,
-    table tfoot th,
-    table tfoot td {
+    thead th, thead td, tfoot th, tfoot td {
       padding: 0.5rem 0.625rem 0.625rem;
       font-weight: bold;
       text-align: left; }
-  table tbody tr:nth-child(even) {
+  tbody tr:nth-child(even) {
     background-color: #f1f1f1; }
-  table tbody th,
-  table tbody td {
+  tbody th, tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
 
 @media screen and (max-width: 63.9375em) {
@@ -4539,7 +4531,8 @@ to display none.
     -webkit-filter: none !important;
             filter: none !important;
     -ms-filter: none !important; }
-  a, a:visited {
+  a,
+  a:visited {
     color: #444 !important;
     text-decoration: underline; }
     a:after, a:visited:after {
@@ -4547,21 +4540,25 @@ to display none.
     a abbr[title]:after, a:visited abbr[title]:after {
       content: " (" attr(title) ")"; }
   .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
+  a[href^='javascript:']:after,
+  a[href^='#']:after {
     content: ""; }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid; }
   img {
     max-width: 100% !important; }
   @page {
     margin: 0.5cm; }
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3; }
   h2,
@@ -4582,10 +4579,10 @@ Stylesheet: Custom Stylesheet
   background-position: 100% 50%;
   background-repeat: no-repeat;
   position: relative;
-  height: 12.5rem; }
+  height: 20.750rem; }
   @media screen and (min-width: 40em) {
     #featured-hero {
-      height: 25rem; } }
+      height: 30rem; } }
 
 /************************************************
 Stylesheet: Media Queries

@@ -17,6 +17,10 @@ function site_scripts() {
     // Register social icons
     wp_enqueue_style( 'social-icons', get_stylesheet_directory_uri().'/social-icons/webicons.css' );
 
+	//enqueues our locally supplied font awesome stylesheet
+	wp_enqueue_style('font-awesome', get_stylesheet_directory_uri() . '/assets/font-awesome-4.7.0/css/font-awesome.css'); 
+
+	
     // Comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script( 'comment-reply' );

@@ -1,0 +1,96 @@
+/*
+Error: Invalid US-ASCII character "\xE2"
+        on line 15 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/typography/_base.scss
+        from line 12 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/typography/_typography.scss
+        from line 16 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/foundation.scss
+        from line 18 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/assets/scss/style.scss
+
+10: // - - - - - - - - - - - - - - -
+11: // These are styles applied to basic HTML tags, including:
+12: //   - Paragraphs <p>
+13: //   - Bold/italics <b> <strong> <i> <em>
+14: //   - Small text <small>
+15: //   - Headings <h1>—<h6>
+16: //   - Anchors <a>
+17: //   - Dividers <hr>
+18: //   - Lists <ul> <ol> <dl>
+19: //   - Blockquotes <blockquote>
+20: //   - Code blocks <code>
+
+Backtrace:
+/Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/typography/_base.scss:15
+/Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/typography/_typography.scss:12
+/Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/foundation.scss:16
+/Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/assets/scss/style.scss:18
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1296:in `rescue in block in find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1293:in `block in find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1292:in `each'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1292:in `each_with_index'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:1292:in `find_encoding_error'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/util.rb:901:in `check_sass_encoding'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/engine.rb:433:in `check_encoding!'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/engine.rb:389:in `_to_tree'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/engine.rb:309:in `to_tree'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `map'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `map'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/engine.rb:278:in `render'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:420:in `run'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/bin/sass:30:in `load'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/bin/sass:30:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 15 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/typography/_base.scss\A         from line 12 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/typography/_typography.scss\A         from line 16 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/vendor/foundation-sites/scss/foundation.scss\A         from line 18 of /Users/langone/Websites/OI - OIFWsites/wp-content/themes/oi-sass-theme-template1/assets/scss/style.scss\A \A 10: // - - - - - - - - - - - - - - -\A 11: // These are styles applied to basic HTML tags, including:\A 12: //   - Paragraphs <p>\A 13: //   - Bold/italics <b> <strong> <i> <em>\A 14: //   - Small text <small>\A 15: //   - Headings <h1>—<h6>\A 16: //   - Anchors <a>\A 17: //   - Dividers <hr>\A 18: //   - Lists <ul> <ol> <dl>\A 19: //   - Blockquotes <blockquote>\A 20: //   - Code blocks <code>"; }
