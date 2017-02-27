@@ -21,6 +21,7 @@ $screen: "only screen" !default;
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;
 
+
 $small-up: $screen !default;
 $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
 
@@ -44,6 +45,7 @@ $retina: (
   "#{$screen} and (min-resolution: 192dpi)",
   "#{$screen} and (min-resolution: 2dppx)"
 );
+
 @media #{$small-up} {}
 
 /* max-width 640px, mobile-only styles, use when QAing mobile issues most phones */
@@ -59,7 +61,7 @@ $retina: (
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues like ipad landscape */
 @media #{$large-only} {}
 
-@media #{$xlarge-up} { }
+@media #{$xlarge-up} {}
 @media #{$xlarge-only} { }
 
 @media #{$xxlarge-up} { }

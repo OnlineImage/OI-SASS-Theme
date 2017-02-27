@@ -23,7 +23,7 @@ function load_typkit_up() { ?>
 	  (function(d) {
 		var config = {
 	// Change the kit id to yours
-		  kitId: 'tfj8xmd',
+		  kitId: 'mum5dth',
 		  scriptTimeout: 500,
 		  async: true
 		},
@@ -31,6 +31,7 @@ function load_typkit_up() { ?>
 	  })(document);
 	</script>
 <?php }
+
 
 //* Adds visual composer to theme
 /**
@@ -116,3 +117,60 @@ add_action( 'vc_before_init', 'your_prefix_vcSetAsTheme' );
 function your_prefix_vcSetAsTheme() {
     vc_set_as_theme();
 }
+
+add_action('init', 'myoverride', 100);
+function myoverride() {
+    remove_action('wp_head', array(visual_composer(), 'addMetaData'));
+}
+
+// Enable shortcodes in text widgets
+add_filter('widget_text','do_shortcode');
+//Custom CSS on Customizer
+function wp_custom_css_register( $wp_customize ){
+
+	$wp_customize->add_section( 'wp_custom_css_section', array(
+		'priority' => 10,
+		'capability' => 'edit_theme_options',
+		'theme_supports' => '',
+		'title' => __( 'Custom CSS', 'customizer-custom-css' ),
+		'description' => '',
+		) );
+
+	$wp_customize->add_setting( 'wp_custom_css', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'transport' => 'postMessage',
+		'sanitize_callback'    => 'wp_kses',
+		) );
+
+	$wp_customize->add_control(
+		'wp_custom_css', array(
+			'label'      => __( 'Add your custom CSS', 'customizer-custom-css' ),
+			'section'    => 'wp_custom_css_section',
+			'settings'   => 'wp_custom_css',
+			'type'       => 'textarea',
+			)
+
+		);
+}
+add_action( 'customize_register', 'wp_custom_css_register' );
+
+// JS for live customizer preview
+ 
+function wp_custom_css_script() {
+	wp_enqueue_script( 'custom_css_script',get_template_directory_uri() . '/assets/js/customizer-custom-css.js', array( 'customize-preview' ), '20140804', true );
+}
+add_action( 'customize_preview_init', 'wp_custom_css_script' );
+
+//outputs custom css on frontend
+if( ! function_exists( 'wp_custom_css_add_custom_css' ) ) :
+
+	function wp_custom_css_add_custom_css(){
+
+		echo '<style id="wp-custom-css">' . esc_textarea(get_theme_mod( 'wp_custom_css', '' )) . '</style>';
+
+	}
+
+	endif;
+	add_action( 'wp_head', 'wp_custom_css_add_custom_css', 1000 );
+

@@ -3,8 +3,9 @@
 register_nav_menus(
 	array(
 		'main-nav' => __( 'The Main Menu', 'jointswp' ),   // Main nav in header
-		'footer-links' => __( 'Footer Links', 'jointswp' ) // Secondary nav in footer
-	)
+		'footer-links' => __( 'Footer Links', 'jointswp' ), // Secondary nav in footer
+		'patient-login' => __( 'Patient Login', 'jointswp' ) // Patient Login link in header
+)
 );
 
 // The Top Menu
@@ -60,6 +61,18 @@ function joints_footer_links() {
 	));
 } /* End Footer Menu */
 
+// The Patient Login Menu
+function joints_login_links() {
+    wp_nav_menu(array(
+    	'container' => 'false',                         // Remove nav container
+    	'menu' => __( 'Patient Login', 'jointswp' ),   	// Nav name
+    	'menu_class' => 'patient-login-menu large-2 medium-4 columns',      					// Adding custom nav class
+    	'theme_location' => 'patient-login',             // Where it's located in the theme
+        'depth' => 0,                                   // Limit the depth of the nav
+    	'fallback_cb' => ''  							// Fallback function
+	));
+} /* End Patient Login Menu */
+
 // Header Fallback Menu
 function joints_main_nav_fallback() {
 	wp_page_menu( array(
@@ -75,6 +88,11 @@ function joints_main_nav_fallback() {
 
 // Footer Fallback Menu
 function joints_footer_links_fallback() {
+	/* You can put a default here if you like */
+}
+
+// Patient Login Fallback Menu
+function joints_login_links_fallback() {
 	/* You can put a default here if you like */
 }
 
