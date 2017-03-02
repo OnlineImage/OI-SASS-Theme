@@ -118,11 +118,11 @@ function your_prefix_vcSetAsTheme() {
     vc_set_as_theme();
 }
 
-add_action('init', 'myoverride', 100);
+/* add_action('init', 'myoverride', 100);
 function myoverride() {
     remove_action('wp_head', array(visual_composer(), 'addMetaData'));
 }
-
+*/
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
 //Custom CSS on Customizer
