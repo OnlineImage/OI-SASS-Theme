@@ -1,63 +1,8 @@
 <?php
+// Adds support for multiple languages
+require_once(get_template_directory().'/assets/functions/customizer-functions.php'); 
+
 // Custom Functions
-/* This allows for a custom logo in the cutomizer section only available on the nav-offcanvas-topbar */
-function themeslug_theme_customizer( $wp_customize ) {
-$wp_customize->add_section( 'themeslug_logo_section' , array(
-    'title'       => __( 'Logo', 'themeslug' ),
-    'priority'    => 30,
-    'description' => 'Upload a logo to replace the default site name and description in the header',
-    ) );
-
-// Header Elements
-$wp_customize->add_section( 'headerels_customizer_section', array(
-    'priority'          => 120,
-    'capability'        => 'edit_theme_options',
-    'theme_supports'    => '',
-    'title'             => __( 'Header Elements', 'customizer_headerels'),
-    'description'       => 'Add phone and/or email here to be displayed in the header',
-    ) );
-$wp_customize->add_setting( 'headerels_phone', array(
-    'default'   => '',
-    'type'      => 'theme_mod',
-    ) );
-$wp_customize->add_setting( 'headerels_email', array(
-    'default'   => '',
-    'type'      => 'theme_mod',
-    ) );
-$wp_customize->add_control( 'headerels_phone', array(
-    'label'      => __( 'Phone Number', 'customizer_headerels' ),
-    'section'    => 'headerels_customizer_section',
-    'settings'   => 'headerels_phone',
-    'type'       => 'text',
-    ) );
-$wp_customize->add_control( 'headerels_email', array(
-    'label'      => __( 'Email Address', 'customizer_headerels' ),
-    'section'    => 'headerels_customizer_section',
-    'settings'   => 'headerels_email',
-    'type'       => 'text',
-    ) );
-
-// Footer Elements
-$wp_customize->add_section( 'footerels_customizer_section', array(
-    'priority'          => 120,
-    'capability'        => 'edit_theme_options',
-    'theme_supports'    => '',
-    'title'             => __( 'Footer Elements', 'customizer_footerels'),
-    'description'       => 'Add custom footer copyright information and privacy and/or legal compliance links',
-    ) );
-$wp_customize->add_setting( 'footerels_copyright', array(
-    'default'   => '',
-    'type'      => 'theme_mod',
-    ) );
-$wp_customize->add_control( 'footels_copyright', array(
-    'label'      => __( 'Copyright Info', 'customizer_footels' ),
-    'section'    => 'footerels_customizer_section',
-    'settings'   => 'footerels_copyright',
-    'type'       => 'text',
-    ) );
-}
-add_action('customize_register', 'themeslug_theme_customizer');
-
 //* Enqueue script to add typekit fonts if you dont use it then comment it our or just add a remove action 
 add_action('wp_enqueue_scripts', 'load_typkit_up');
 function load_typkit_up() { ?>
@@ -162,34 +107,6 @@ function your_prefix_vcSetAsTheme() {
 
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
-//Custom CSS on Customizer
-function wp_custom_css_register( $wp_customize ){
-	$wp_customize->add_section( 'wp_custom_css_section', array(
-		'priority' => 10,
-		'capability' => 'edit_theme_options',
-		'theme_supports' => '',
-		'title' => __( 'Custom CSS', 'customizer-custom-css' ),
-		'description' => '',
-		) );
-
-	$wp_customize->add_setting( 'wp_custom_css', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'transport' => 'postMessage',
-		'sanitize_callback'    => 'wp_kses',
-		) );
-
-	$wp_customize->add_control(
-		'wp_custom_css', array(
-			'label'      => __( 'Add your custom CSS', 'customizer-custom-css' ),
-			'section'    => 'wp_custom_css_section',
-			'settings'   => 'wp_custom_css',
-			'type'       => 'textarea',
-			)
-
-		);
-}
-add_action( 'customize_register', 'wp_custom_css_register' );
 
 // JS for live customizer preview
  
@@ -209,35 +126,3 @@ if( ! function_exists( 'wp_custom_css_add_custom_css' ) ) :
 
 	endif;
 	add_action( 'wp_head', 'wp_custom_css_add_custom_css', 1000 );
-
-/* This allows for a phone number and/or email address in the cutomizer section to be displayed in the header */
-/*function headerels_customizer_register( $wp_customize ) {
-$wp_customize->add_section( 'headerels_customizer_section', array(
-    'priority'          => 120,
-    'capability'        => 'edit_theme_options',
-    'theme_supports'    => '',
-    'title'             => __( 'Header Elements', 'customizer_headerels'),
-    'description'       => 'Add phone and/or email here to be displayed in the header',
-    ) );
-$wp_customize->add_setting( 'headerels_phone', array(
-    'default'   => '',
-    'type'      => 'theme_mod',
-    ) );
-$wp_customize->add_setting( 'headerels_email', array(
-    'default'   => '',
-    'type'      => 'theme_mod',
-    ) );
-$wp_customize->add_control( 'headerels_phone', array(
-    'label'      => __( 'Phone Number', 'customizer_headerels' ),
-    'section'    => 'headerels_customizer_section',
-    'settings'   => 'headerels_phone',
-    'type'       => 'text',
-    ) );
-$wp_customize->add_control( 'headerels_email', array(
-    'label'      => __( 'Email Address', 'customizer_headerels' ),
-    'section'    => 'headerels_customizer_section',
-    'settings'   => 'headerels_email',
-    'type'       => 'text',
-    ) );
-}
-add_action('customize_register', 'headerels_customizer_register');*/
