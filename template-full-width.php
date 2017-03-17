@@ -8,7 +8,7 @@ Template Name: Full Width (No Sidebar)
 			
 	<div id="content">
 	<?php get_template_part( 'parts/featured-image' ); ?>
-		<div id="inner-content" class="row">
+		<div id="inner-content">
 	
 		    <main id="main" class="large-12 medium-12 columns" role="main">
 				
