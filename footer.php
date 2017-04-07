@@ -6,7 +6,11 @@
 		    					</nav>
 		    				</div>
 							<div class="large-12 medium-12 columns">
-								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+								<?php if ( get_theme_mod( 'footerels_copyright' ) ) : ?>
+									<p class="source-org copyright"><?php echo get_theme_mod( 'footerels_copyright' ); ?></p>
+								<?php else: ?>
+									<p class="source-org copyright">Proudly Powered by WordPress | &copy; <?php echo date('Y'); ?> OnlineImage</p>
+								<?php endif; ?>
 							</div>
 						</div> <!-- end #inner-footer -->
 					</footer> <!-- end .footer -->

@@ -1,21 +1,8 @@
 <?php
-// Custom Functions
-/* This allows for a custom logo in the cutomizer section only available on the nav-offcanvas-topbar */
-function themeslug_theme_customizer( $wp_customize ) {
-$wp_customize->add_section( 'themeslug_logo_section' , array(
-    'title'       => __( 'Logo', 'themeslug' ),
-    'priority'    => 30,
-    'description' => 'Upload a logo to replace the default site name and description in the header',
-) );
-$wp_customize->add_setting( 'themeslug_logo' );
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
-    'label'    => __( 'Logo', 'themeslug' ),
-    'section'  => 'themeslug_logo_section',
-    'settings' => 'themeslug_logo',
-) ) );
-}
-add_action('customize_register', 'themeslug_theme_customizer');
+// Adds support for multiple languages
+require_once(get_template_directory().'/assets/functions/customizer-functions.php'); 
 
+// Custom Functions
 //* Enqueue script to add typekit fonts if you dont use it then comment it our or just add a remove action 
 add_action('wp_enqueue_scripts', 'load_typkit_up');
 function load_typkit_up() { ?>
@@ -118,42 +105,8 @@ function your_prefix_vcSetAsTheme() {
     vc_set_as_theme();
 }
 
-/* add_action('init', 'myoverride', 100);
-function myoverride() {
-    remove_action('wp_head', array(visual_composer(), 'addMetaData'));
-}
-*/
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
-//Custom CSS on Customizer
-function wp_custom_css_register( $wp_customize ){
-
-	$wp_customize->add_section( 'wp_custom_css_section', array(
-		'priority' => 10,
-		'capability' => 'edit_theme_options',
-		'theme_supports' => '',
-		'title' => __( 'Custom CSS', 'customizer-custom-css' ),
-		'description' => '',
-		) );
-
-	$wp_customize->add_setting( 'wp_custom_css', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'transport' => 'postMessage',
-		'sanitize_callback'    => 'wp_kses',
-		) );
-
-	$wp_customize->add_control(
-		'wp_custom_css', array(
-			'label'      => __( 'Add your custom CSS', 'customizer-custom-css' ),
-			'section'    => 'wp_custom_css_section',
-			'settings'   => 'wp_custom_css',
-			'type'       => 'textarea',
-			)
-
-		);
-}
-add_action( 'customize_register', 'wp_custom_css_register' );
 
 // JS for live customizer preview
  
@@ -173,4 +126,3 @@ if( ! function_exists( 'wp_custom_css_add_custom_css' ) ) :
 
 	endif;
 	add_action( 'wp_head', 'wp_custom_css_add_custom_css', 1000 );
-
